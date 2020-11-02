@@ -62,16 +62,16 @@ function Home({ store, findfalcone }) {
       <div className="row">
         {planets}
         <div className="w-20">
-          <b className="text_bold stick_right">Time taken</b>
+          <b className="text_bold stick_right text-primary">Time taken</b>
           <br />
-          <span className="badge badge-lg badge-pill badge-secondary btn stick_right">
+          <span className="badge badge-lg badge-pill badge-primary btn stick_right">
             {store.time}
           </span>
         </div>
       </div>
       <center className="my-5">
         <button
-          className="btn btn-outline-dark"
+          className="btn btn-outline-primary"
           onClick={findFalconeFn}
           disabled={Planets_Selected() ? false : true}
         >

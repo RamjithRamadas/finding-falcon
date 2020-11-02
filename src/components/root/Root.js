@@ -43,7 +43,7 @@ function Root(props) {
       <Header reset={reset} />
       <div className="container-fluid">
         <center>
-          <h1 className="my-3">Finding Falcone!</h1>
+          <h1 className="my-3 ">Finding Falcone!</h1>
         </center>
         {isLoading() ? <Loading message={props.store.status} /> : null}
         {isgameOver() ? <GameOver reset={reset} store={props.store} /> : null}

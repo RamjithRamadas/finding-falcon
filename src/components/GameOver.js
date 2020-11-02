@@ -21,7 +21,7 @@ export default function GameOver(props) {
         {status == "success" ? planet_name : null}
         <p>
           <button
-            className="btn badge badge-pill badge-dark"
+            className="btn badge badge-pill badge-primary "
             onClick={props.reset}
           >
             Play Again

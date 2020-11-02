@@ -36,21 +36,21 @@ function Planet(props) {
   };
 
   const changeHandler = (event) => {
-    const cur_planet = parseInt(event.target.value);
-    const distance = cur_planet !== -1 ? props.planets[cur_planet].distance : 0;
+    const currentPlanet = parseInt(event.target.value);
+    const distance = currentPlanet !== -1 ? props.planets[currentPlanet].distance : 0;
     const prev_planet = selectedPlanet;
     if (prev_planet !== -1) {
       props.addQuantity(prev_planet, "planet");
     }
-    if (cur_planet !== -1) {
-      props.subQuantity(cur_planet, "planet");
+    if (currentPlanet !== -1) {
+      props.subQuantity(currentPlanet, "planet");
     }
     props.addQuantity(selectedVehicle, "vehicle");
     props.updateTime(-time);
     setId((prevState) => prevState.id + MAX_VEHICLES);
     setSelectedVehicle(-1);
     setTime(0);
-    setSelectedPlanet(cur_planet);
+    setSelectedPlanet(currentPlanet);
     setDistance(distance);
   };
 
